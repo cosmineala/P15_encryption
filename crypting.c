@@ -5,6 +5,7 @@
 
 #include "crypting.h"
 #include "function.h"
+#include "testing.h"
 
 
 
@@ -123,7 +124,7 @@
                 
                     p = trans_asci_num [ (( int ) st_citire[i]) - 65];
                                                                                                         //  printf(" >poz>%d<poz< \n",p);
-                    if ( p >= 0 && p <= 9 ) {/*--------rand 1*/
+                    if ( p >= 0 && p <= 9 ) {/*-------------rand 1*/
                         if ( p - a < 0 ) {
                             p = p - a + 10;
                             st_citire[i] = (char)(trans_mum_asci[p] + 65);
@@ -134,7 +135,7 @@
                     
                     }
                     else{
-                        if ( p >= 10 && p <= 18 ) {//------rand 2
+                        if ( p >= 10 && p <= 18 ) {//--------rand 2
                             if ( p - a < 10) {
                                 p = p - a + 9;
                                 st_citire[i] = (char)(trans_mum_asci[p] + 65);
@@ -158,7 +159,7 @@
                         }
                     }
                 
-                }/*--------------------------------end-literemari*/
+                }/*---------------------------------end-literemari*/
             
             }
         
@@ -238,7 +239,7 @@ void crypt()
             
             p = trans_asci_num [ (( int ) st_citire[i]) - 97];
             //  printf(" >poz>%d<poz< \n",p);
-            if ( p >= 0 && p <= 9 ) {/*--------rand 1*/
+            if ( p >= 0 && p <= 9 ) {/*-----------rand 1*/
                 if ( p + a > 9 ) {
                     p = p + a - 10;
                     st_citire[i] = (char)(trans_mum_asci[p] + 97);

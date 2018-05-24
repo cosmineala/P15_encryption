@@ -43,13 +43,25 @@
 				   >>>%d",file_status);
 
 		}
+//--------------------------FILE--START------
+ 		
+ 	FILE * fp;
+
+    fp = fopen ("Rezultate_test.txt", "w");
+    fprintf(fp, " %s ", );
+   
+    fclose(fp);
+
+//-------------------------FILE--END----------
 
 
 
+//------------------------RANDOM--START--------
 
+   srand(time(NULL));   // should only be called once
+int r = rand();      // returns a pseudo-random integer between 0 and RAND_MAX
 
-		
-
-
+//------------------------RANDOM--END-----------
 
 	}
+
