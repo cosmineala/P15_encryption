@@ -1,8 +1,8 @@
 #ifndef CRYPTING
 #define CRYPTING
 
-void decrypt();
+void decrypt(char *st_citire);
 
-void crypt();
+void crypt(char *st_citire);
 
 #endif

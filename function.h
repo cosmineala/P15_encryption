@@ -1,7 +1,7 @@
 #ifndef FUNCTION
 #define FUNCTION
 
-char *scan();
+void scan( int stage );
 
 void men();
 

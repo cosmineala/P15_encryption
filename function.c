@@ -23,12 +23,12 @@
 
         	case '1':
             	printf("\n");
-            	crypt();
+            	scan(1);
             	break;
 
         	case '2':
             	printf("\n");
-            	decrypt();
+            	scan(2);
             	break;
 
             case 'h':
@@ -37,7 +37,7 @@
                 break;
 
             case 't':
-                //not implemented yet-----------------------------------------------------!!!!!!!!!---------!!!!!!!!!!-----
+                test();
                 men();
                 break;
 
@@ -52,7 +52,7 @@
 
 	}
 
-	char *scan(){
+	void scan( int stage ){
     
         char *st_citire;
         char c = 'a';
@@ -83,8 +83,30 @@
         }
     
         st_citire[ j ] = '\0';
+
+        switch(stage){
+
+            case 1 :
+                crypt(st_citire);
+                break;
+
+            case 2 :
+                decrypt(st_citire);
+                break;
+
+        }
+
+        if (stage == 1 || stage == 2){
+           
+            free(st_citire);
+
+            men();
+
+        }
+
+
         
-        return st_citire;
+        return ;
     
     
 }

@@ -22,8 +22,8 @@ CFLAGS=-c -Wall
 
 all: encryption
 
-encryption: main.o function.o crypting.o
-	$(CC) main.o function.o crypting.o -o encryption
+encryption: main.o function.o crypting.o testing.o
+	$(CC) main.o function.o crypting.o testing.o -o encryption
 
 main.o: main.c
 	$(CC) $(CFLAGS) main.c
@@ -34,5 +34,8 @@ function.o: function.c
 crypting.o: crypting.c
 	$(CC) $(CFLAGS) crypting.c
 
+testing.o: testing.c
+	$(CC) $(CFLAGS) testing.c
+
 clean:
-	rm *o encryption
+	rm *.o *.txt encryption
