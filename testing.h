@@ -1,6 +1,6 @@
 #ifndef TESTING
 #define TESTING
 
-void test();
+void test(); 
 
 #endif

@@ -3,6 +3,6 @@
 
 void decrypt(char *st_citire);
 
-void crypt(char *st_citire);
+void crypt(char *st_citire); 
 
 #endif

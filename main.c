@@ -7,7 +7,7 @@
 
 
 int main(){
-
+  
 	men();
 
 	return 0;

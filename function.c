@@ -11,7 +11,7 @@
 
         char meniu = 'a';
 
-   		printf(" \nINSERT: \n1 to encrypt \n2 to decrypt \n0 to exit \nH for help \nT for testing program \n>>> ");
+   		printf(" \nINSERT: \n1 to encrypt \n2 to decrypt \n0 to exit \nh for help \nt for testing program \n>>> ");
 
     	scanf("%c",&meniu);
 
@@ -32,12 +32,17 @@
             	break;
 
             case 'h':
-                printf("\n Welcome to Encryption by Capisizu Cosmin \nIf you want to encrypt a string go to meniu 1 , you can encrypt a string up to 1024 characters from the terminal\nIf you want to decrypt a string go to meniu 2 , you can decrypt a string up to 1024 characters\nIf you want to close and exit program go to meniu 0 , it will close the program\nIf you want enter testing mode go to meniu T for a custom or automatic testing of the program\n");
+                printf("\n Welcome to Encryption by Capisizu Cosmin \n\nIf you want to encrypt a string go to meniu 1 , you can encrypt a string up ");
+                printf("to\n1024 characters from the terminal.\n\nIf you want to decrypt a string go to meniu 2 , you can decrypt a string up to\n1024 ");
+                printf("characters.\n\nIf you want to close and exit program go to meniu 0 , it will close the program.\n\nIf you want enter testing ");
+                printf("mode go to meniu T for a custom or automatic testing\n of the program.\n");
+                scanf("%c",&meniu);
                 men();
                 break;
 
             case 't':
                 test();
+                scanf("%c",&meniu);
                 men();
                 break;
 
@@ -58,7 +63,7 @@
         char c = 'a';
         int j = 0;
     
-        st_citire = (char*)malloc(sizeof(char));
+        st_citire = (char*)malloc(25*sizeof(char));
 
 
                                                                             char bug;//rezolvare bug
@@ -72,10 +77,12 @@
         
             c = getc(stdin);
         
+            if ( j % 25 == 0 ){
+            
+                st_citire = (char*)realloc(st_citire, (j + 25) * sizeof(char));
+            }
         
-            st_citire = (char*)realloc(st_citire, (j + 1) * sizeof(char));
-        
-        
+            
             st_citire[j] = c;
         
         

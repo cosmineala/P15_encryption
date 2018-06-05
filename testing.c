@@ -21,13 +21,20 @@
 		int characters_number = 0;
 
 
-		printf("enter 0 for auto test (random string of random size betwin 10^3 and 10^8 characters and random cryptation chey)\n");
-		printf("enter 1 for manua testing (yoy can set size , encryption chey and save the test to a custom file)\n");
+		printf("\n\nenter 1 for auto test (random string of random size betwin 10^3 and 10^8\ncharacters and random cryptation chey).\n\n");
+		printf("enter 2 for manua testing (yoy can set size , encryption chey and save the test to a custom file).\n\n");
+		printf("enter 0 to exit.\n\n");
 		printf(">>>");
 
 		scanf("%d", &selector);
 
-		if( selector == 0){
+		if (selector == 0)	
+		{
+			return ;
+		}
+
+
+		if( selector == 1){
 
 			srand(time(NULL));
 
@@ -39,11 +46,16 @@
 			// random cate caractere
 
 		}
-		else{
+		
+		if (selector == 2){
 
-			scanf("Enter encryption chey :\n>>>%c",&chey);
+            scanf("%c",&chey);                                                  // bug solved
 
-			scanf("Enter how many characters must the test have :\n>>>%d",&characters_number);
+			printf("Enter encryption chey :\n>>>");
+			scanf("%c",&chey);
+
+			printf("Enter how many characters must the test have :\n>>>");
+			scanf("%d",&characters_number);
 
 
 		}
@@ -75,7 +87,7 @@
 
 free(st_citire);
 
-men();
+
 
 return ;
 

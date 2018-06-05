@@ -62,7 +62,7 @@
             }else{
                 printf("(de cr)Mesaj incorect , incercati din nou\n");
                 free(st_citire);
-                men();
+                men();  
                 return ;
             
             }
